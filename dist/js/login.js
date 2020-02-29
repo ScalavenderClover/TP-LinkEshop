@@ -1,1 +1,1 @@
-"use strict";
+"use strict";$("#login-f").validate({rules:{username:"required",password:{required:!0,minlength:6,maxlength:12}},messages:{username:"请输入用户名! ^_^",password:{required:"请输入密码!",minlength:"最少要输入 6 个字符噢!"}},submitHandler:function(e){}});

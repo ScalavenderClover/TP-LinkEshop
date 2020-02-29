@@ -1,0 +1,12 @@
+*{margin: 0;padding: 0;}
+html{overflow-x: hidden;}
+body{font-size: 12px;font-family: "微软雅黑";color: #333;}
+
+h1,h2,h3,h4,h5,h6,strong,b{font-weight: normal;}
+ul,li{list-style: none;}
+em,i{font-style: normal;}
+a,u{text-decoration: none;}
+img{display: block;}
+
+
+.clean:after{content: '.';display: block;clear: both;height: 0;overflow: hidden;visibility: hidden;}

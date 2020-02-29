@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Document</title><style>input.error{border-bottom:1px solid red}label.error{color:red;display:block;font-size:14px}</style><link rel=stylesheet href=../css/login.css><link rel=stylesheet href=../css/reset.css><link rel=stylesheet href=../lib/bootstrap/dist/css/bootstrap-theme.min.css><link rel=stylesheet href=../lib/bootstrap/dist/css/bootstrap.min.css></head><body><script src=../lib/jquery/dist/jquery.min.js></script><script src=../lib/jquery-validate/jquery.validate.min.js></script><script src=../lib/jquery-validate/localization/messages_zh.min.js></script><script src=../js/login.js></script><div class=header><div class=container><a href=./index.html><img src=../images/login/logo.png alt=logo.png></a></div></div><div class=login><form id=login-f action=../server/login.php method=POST><div class=login-container><div class=login-container-titile>TP-LINK会员登录</div><p class=login-container-info>账号或密码错误</p><div class=account><input type=text class=account-input name=username maxlength=50 placeholder=邮箱/手机号></div><div class=account-password><input type=text class=account-password-input name=password maxlength=50 placeholder=密码></div><div class=account-code><input type=text class=account-code-input name=codeI id=codeI maxlength=50 placeholder=验证码> <input type=button class=account-code-img name=code id=code onclick=createCode()></div><div class=account-login-submit><button class="btn btn-primary btn-lg" style=width:400px;background-color:#0096ff;border:none onclick=validate()>登录</button></div></div></form></div><script>window.onload=createCode();
+
+            var code ; //在全局定义验证码  
+            
+            function createCode(){ 
+                code = "";  
+                var codeLength = 4;//验证码的长度  
+                var checkCode = document.getElementById("code");  
+                var random = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R',  
+                                        'S','T','U','V','W','X','Y','Z');//随机数  
+                for(var i = 0; i < codeLength; i++) {//循环操作  
+                var index = Math.floor(Math.random()*36);//取得随机数的索引（0~35）  
+                code += random[index];//根据索引取得随机数加到code上  
+                }  
+                checkCode.value = code;//把code值赋给验证码  
+            } 
+
+            function validate(){  
+                var inputCode = document.getElementById("codeI").value.toUpperCase(); //取得输入的验证码并转化为大写     
+                if(inputCode.length <= 0) { //若输入的验证码长度为0  
+                     alert("请输入验证码！"); //则弹出请输入验证码  
+                }else if(inputCode != code ) { //若输入的验证码与产生的验证码不一致时  
+                    alert("验证码输入错误！@_@"); //则弹出验证码输入错误  
+                    createCode();//刷新验证码  
+                    document.getElementById("codeI").value = "";//清空文本框  
+                }else { //输入正确时  
+                    alert("合格！^-^"); 
+                } 
+            }
+
+            $(function(){
+
+                var flag = $("#login-f").validate({
+                    onfocusout: function(element) { $(element).valid(); }, 
+                    rules: {
+                        // key 就是你要验证的哪个 input 框的 name 属性
+                        username: 'required', // 用户名必填
+                        password: { // 一个字段可以写多个验证方式
+                            required: true,
+                            minlength: 6, // 最少是六个
+                            maxlength: 12, // 最多十二个
+                        },
+                        codeI: 'required'
+                        },
+                        // 你自定义提示的文本内容
+                        messages: {
+                        // key 就是你验证的哪个 input 框的 name 属性
+                        username: '请输入用户名!',
+                        password: {
+                            required: '请输入密码!',
+                            minlength: '最少要输入 6 个字符!'
+                        },
+                        codeI: '请输入验证码!'
+                        },
+                        // 表单的提交事件
+                        //    这个函数会在表单验证通过以后执行
+                        submitHandler: function (form) {
+                        // form 接收的就是你的 form 标签
+                        // console.log(form)
+                        // console.log('表单验证通过了, 我需要使用 ajax 去提交数据了')
+
+                        // 有一个 jQuery 的方法
+                        // serialize() 快速获取表单输入的数据
+                        //  $(form).serialize() 就能拿到这个 form 标签里面的表单数据
+                        // console.log($(form).serialize())  // username=admin&password=123456
+
+                        // 发送请求到后端
+                          console.log('验证成功');
+                          $.post('../server/login.php', $(form).serialize(), res => {
+                            console.log(res)
+                            var result = JSON.stringify(res)
+
+                            if (result.code === 0) {
+                                console.log('登录失败')
+                            } else {
+                            // 登录成功
+                            // setCookie('login', 1, 30)
+                            window.location.href = './index.html'
+                            }
+                          }, 'json')
+                        
+                        }
+                    
+                });
+            });</script></body></html>
