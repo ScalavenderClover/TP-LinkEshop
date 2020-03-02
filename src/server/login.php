@@ -27,7 +27,7 @@
     //   );
 
   if ($row) {
-    $arr = array("message" => "登录成功", "code" => 1);
+    $arr = array("message" => "登录成功", "code" => 1,"username" => "$username");
   } else {
     $arr = array("message" => "登录失败", "code" => 0);
   }

@@ -19,11 +19,13 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/common.min.css">
 </head>
 <body>
     <script src="../lib/jquery/dist/jquery.min.js"></script>
     <script src="../lib/jquery-validate/jquery.validate.min.js"></script>
     <script src='../lib/jquery-validate/localization/messages_zh.min.js'></script>
+    <script src="../lib/jquery-cookie/jquery.cookie.js"></script>
     <script src="../js/login.js"></script>
     <div class="header">
         <div class="container">
@@ -35,14 +37,14 @@
         <form id="login-f" action="../server/login.php" method="POST">
             <div class="login-container">
                 <div class="login-container-titile">TP-LINK会员登录</div>
-                <p class="login-container-info">账号或密码错误</p>
+                <!-- <p class="login-container-info">账号或密码错误</p> -->
                 <div class="account">
                     <input type="text" class="account-input" name="username" maxlength="50" placeholder="邮箱/手机号">
                 </div>
                 <!-- <p class="account-info">请输入邮箱或手机号</p> -->
 
                 <div class="account-password">
-                    <input type="text" class="account-password-input" name="password" maxlength="50" placeholder="密码">
+                    <input type="password" class="account-password-input" name="password" maxlength="50" placeholder="密码">
                 </div>
                 <!-- <p class="account-password-info">请输id入密码</p> -->
 
@@ -52,9 +54,11 @@
                 </div>
 
                 <div class="account-login-submit">
-                    <button class="btn btn-primary btn-lg" style="width: 400px;background-color: #0096FF;border:none;" onclick="validate()">登录</button>
+                    <button class="btn btn-primary btn-lg" style="width: 400px;background-color: #0096FF;border:none;text-align: center;" onclick="validate()">立即登录</button>
                 </div>
-                
+                <div class="account-bottom clean" style="width: 400px;margin: 0 auto 80px;">
+                    <a class="account-bottom-register" href="./register.html" style="text-decoration: none;float: right;">免费注册</a>
+                </div>
             </div>
         </form>
     </div>
@@ -130,12 +134,14 @@
                           $.post('../server/login.php', $(form).serialize(), res => {
                             console.log(res)
                             var result = JSON.stringify(res)
-
+                            console.log(result)
+                            var admin =res.username
+                            console.log(admin)
                             if (result.code === 0) {
                                 console.log('登录失败')
                             } else {
                             // 登录成功
-                            // setCookie('login', 1, 30)
+                            $.cookie('name', '1194687782@qq.com');
                             window.location.href = './index.html'
                             }
                           }, 'json')

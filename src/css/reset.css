@@ -8,5 +8,5 @@ em,i{font-style: normal;}
 a,u{text-decoration: none;}
 img{display: block;}
 
-
+input:focus{ outline:none; }
 .clean:after{content: '.';display: block;clear: both;height: 0;overflow: hidden;visibility: hidden;}

@@ -1,0 +1,5 @@
+body,li,ul{margin:0;padding:0}.not-display,.ui-helper-hidden-accessible{display:none!important}body{background-color:#F7F7F7;font-family:'Microsoft YaHei','Hiragino Sans GB',SimHei}h3,p{margin:0}li,ul{list-style-type:none}img{border:none}input,select,textarea{outline:0}a{text-decoration:none}.container{width:1200px;margin:0 auto}.not-visible{visibility:hidden}.clear{clear:both}
+/* .btn{width:160px;height:48px;border-radius:2px;text-align:center;line-height:48px;cursor:pointer;float:left}
+.btn-sub{background:#0096FF;color:#fff;font-weight:700}
+.btn-off{border:1px solid #0096FF;color:#0096FF} */
+input:focus::-webkit-input-placeholder{color:transparent}input:focus:-moz-placeholder{color:transparent}input:focus::-moz-placeholder{color:transparent}input:focus:-ms-input-placeholder{color:transparent}input:focus{border-bottom:1px solid #0096FF;caret-color:#0096FF}

@@ -62,6 +62,7 @@
     padding-bottom:9px;
     width:100%;
     border-bottom:1px solid #ccc;
+    outline:none;
 }
 
 .account-info{
@@ -92,13 +93,13 @@
 .account-login-submit{width:400px;height:48px;margin:48px auto 24px;background-color:#0096FF;border-radius:2px;cursor:pointer}
 
 .account-login-submit-word{font-size:16px;color:#FFF;text-align:center;line-height:48px;font-weight:700}
-.account-login-main-bottom{width:400px;height:20px;margin:0 auto 80px}
+.account-bottom{width:400px;height:20px;margin:0 auto 80px}
 .account-login-main-bottom-remember{width:100px;float:left}
 .account-login-main-bottom-remember-check{width:16px;height:16px;background-image:url(/Content/themes/base/images/Account/No_Choose.png);float:left;cursor:pointer;margin:2px 4px 2px 0}
 .account-login-main-bottom-remember-check.active{width:16px;height:16px;background-image:url(/Content/themes/base/images/Account/Choose.png)}
 .account-login-main-bottom-remember-word{float:left;font-size:14px;color:#333}
 .account-login-main-bottom-forget,.account-login-main-bottom-other,.account-login-main-bottom-register{font-size:14px;float:right;height:20px;line-height:20px}
-.account-login-main-bottom-register{color:#0096FF}
+.account-bottom-register{color:#0096FF}
 .account-login-main-bottom-other{color:#CCC;padding:0 12px}
 .account-login-main-bottom-forget{color:#0096FF}
 input:focus{border-bottom:1px solid #0096FF;caret-color:#0096FF}
