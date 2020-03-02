@@ -37,17 +37,49 @@
     font-weight:700;
 }
 
-.account-tab{width:400px;height:32px;margin:36px auto 0}
+.account-tab{
+    width:400px;
+    height:32px;
+    margin:36px auto 0;
+}
 
-.account-tab-item{width:50%;height:100%;float:left;font-size:14px;color:#333;text-align:center;line-height:32px;box-sizing:border-box;border-bottom:1px solid #CCC;cursor:pointer}
+.account-tab-item{
+    width:50%;
+    height:100%;
+    float:left;
+    font-size:14px;
+    color:#333;
+    text-align:center;
+    line-height:32px;
+    box-sizing:border-box;
+    border-bottom:1px solid #CCC;cursor:pointer;
+}
 
-.account-tab-item.active{color:#0096FF;border-bottom:1px solid #0096FF}
+.account-tab-item.active{
+    color:#0096FF;
+    border-bottom:1px solid #0096FF
+}
 
-.account-phone{width:100%;margin:0 auto}
+.account-phone{
+    width:100%;
+    margin:0 auto
+}
 
-.account-register-phone{width:400px;height:48px;margin:24px auto 0;position:relative}
+.account-register-phone{
+    width:400px;
+    height:48px;
+    margin:24px auto 0;
+    position:relative
+}
 
-.account-register-phone-input{font-size:14px;color:#333;line-height:20px;border:none;padding-bottom:9px;width:100%;border-bottom:1px solid #ccc}
+.account-register-phone-input{
+    font-size:14px;
+    color:#333;
+    line-height:20px;
+    border:none;
+    padding-bottom:9px;width:100%;
+    border-bottom:1px solid #ccc
+}
 
 .account-register-phone-contact-img{width:16px;height:16px;position:absolute;right:0;bottom:12px}
 
@@ -101,5 +133,3 @@
 .account-mail-submit{width:400px;height:48px;margin:48px auto 24px;background-color:#0096FF;border-radius:2px;cursor:pointer}
 .account-register-main-submit{width:400px;height:48px;margin:48px auto 24px;background-color:#0096FF;border-radius:2px;cursor:pointer}
 .account-register-main-submit-word{font-size:16px;color:#FFF;text-align:center;line-height:48px;font-weight:700}
-
-.account-register-main-bottom{width:400px;height:20px;margin:0 auto 80px}.account-register-main-bottom-agreement{width:200px;float:left}.account-register-main-bottom-agreement-check{width:16px;height:16px;background-image:url(/Content/themes/base/images/Account/No_Choose.png);float:left;cursor:pointer;margin:2px 4px 2px 0}.account-register-main-bottom-agreement-check.active{width:16px;height:16px;background-image:url(/Content/themes/base/images/Account/Choose.png)}.account-register-main-bottom-agreement-word{float:left;font-size:14px;color:#333;text-decoration:underline;cursor:pointer}.account-register-main-bottom-agreement-word.error{color:#FF3232}.account-register-main-bottom-login{font-size:14px;color:#0096FF;float:right;height:20px;line-height:20px}.content{width:100%;height:1000px;background-image:url(/Content/themes/base/images/Shared/loginBg.png)}.content .container{padding-top:80px}.content .container .login-register{width:600px;height:728px;background-color:#fff;margin-left:360px;float:left}.content .container .login-register .login-register-l-rg .titleBig{padding-top:40px;font-size:24px;color:#0096FF;line-height:40px;text-align:center;font-weight:700}.content .container .login-register .login-register-l-rg .r-tabs{width:400px;height:32px;margin:36px auto 24px}.content .container .login-register .login-register-l-rg .r-tabs .r-tab{float:left;width:50%;text-align:center}.content .container .login-register .login-register-l-rg .r-tabs .r-tab .t-t{font-size:14px;color:#333;line-height:32px;border-bottom:1px solid #ccc;cursor:pointer}.content .container .login-register .login-register-l-rg .r-tabs .r-tab .t-t.active{color:#0096FF;border-bottom:1px solid #0096FF}.content .container .login-register .login-register-l-rg .r-tabcont{width:400px;margin:0 auto}.content .container .login-register .login-register-l-rg .login-register-l-c-d{position:relative;margin-top:24px}.content .container .login-register .login-register-l-rg .login-register-l-c-t{display:none;top:10px;left:0;font-size:12px;color:#999;position:absolute}.content .container .login-register .login-register-l-rg .inputRegisterDefualt{width:400px;height:23px;padding-top:24px;margin:0 auto;position:relative}.content .container .login-register .login-register-l-rg .inputRegisterDefualt input{display:block;width:100%;border:none;height:24px;outline:0;border-bottom:1px solid #ccc}.content .container .login-register .login-register-l-rg .inputRegisterDefualt input:focus::-webkit-input-placeholder{color:transparent}.content .container .login-register .login-register-l-rg .inputRegisterDefualt input:focus:-moz-placeholder{color:transparent}.content .container .login-register .login-register-l-rg .inputRegisterDefualt input:focus::-moz-placeholder{color:transparent}.content .container .login-register .login-register-l-rg .inputRegisterDefualt input:focus:-ms-input-placeholder{color:transparent}.content .container .login-register .login-register-l-rg .inputRegisterDefualt input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #fff inset}.content .container .login-register .login-register-l-rg .inputRegisterDefualt .wellForm{background-image:url(../../images/Shared/wellForm.png);width:16px;height:16px;position:absolute;right:0;top:27px;display:none}.content .container .login-register .login-register-l-rg .inputRegisterDefualt #imgCode,.content .container .login-register .login-register-l-rg .inputRegisterDefualt #imgCode2{width:100px;height:36px;right:0;bottom:0;position:absolute}.content .container .login-register .login-register-l-rg .inputRegisterDefualt .errtips span{font-size:12px;color:#FF2119}.content .container .login-register .login-register-l-rg .inputRegisterDefualt .sendsmscode{right:0;bottom:5px;position:absolute;width:144px;height:32px;line-height:32px;background-color:#F7F7F7;border:1px solid #CCC;border-radius:2px;font-size:14px;color:#999;text-align:center;cursor:pointer}.content .container .login-register .login-register-l-rg .inputRegisterDefualt .sendsmscode.active{border:1px solid #0096FF;color:#0096FF;background-color:#fff}.content .container .login-register .regbtn{width:400px;height:48px;background-color:#0096FF;margin:48px auto 24px;cursor:pointer}.content .container .login-register .regbtn .btn-c{color:#fff;font-size:16px;font-weight:700;line-height:48px;text-align:center}.content .container .login-register .registertreaty{width:400px;height:20px;margin:0 auto}.content .container .login-register .registertreaty .protocol{font-size:14px;color:#333;text-decoration:underline;cursor:pointer;float:left}.content .container .login-register .registertreaty .gotologin{float:right}.content .container .login-register .registertreaty .gotologin a{text-decoration:none;font-size:14px;color:#0096FF;float:right;height:20px;line-height:20px}.content .container .login-register .registertreaty .check{display:block;border:1px solid #0096FF;width:10px;height:10px;margin:4px 6px 0 0;float:left;cursor:pointer}.content .container .login-register .registertreaty .check.active{width:16px;height:16px;background-image:url(../../images/Shopping/Choose.png);border:none;margin:2px 4px 0 -2px}.content .container .advert{width:625px;height:728px;float:left;display:none}#mask,.content .container .advert img{width:100%}#errorMsg{width:400px;margin:5px auto}#errorMsg #spanErrorMsg{color:#FF2119}.hidden{display:none}#mask{height:100%;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.2);z-index:999}#mask #agreement{background-color:#fff;border-radius:2px;box-shadow:0 2px 10px 0 rgba(0,0,0,.2);position:absolute;top:50%;left:50%;margin-left:-400px;margin-top:-250px;height:500px;width:800px;overflow-y:scroll}#mask #agreement .agreecontain{width:700px;margin:10px auto}#mask #agreement .agreecontain .title{margin:30px auto 45px;width:270px;display:block;font-size:25px;line-height:25px}#mask #agreement .agreecontain p{font-size:12px;line-height:16px}#mask #agreement .agreecontain h3{font-size:14px}#mask .cancel{width:24px;height:24px;background-image:url(../../images/product/Close_max.png);position:absolute;top:15.6px;right:11.7px;cursor:pointer}

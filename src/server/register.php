@@ -12,10 +12,8 @@
   $link = mysqli_connect('localhost', 'root', 'root', 'newdata');
 
   // 执行 sql 语句了
-  //   执行一条插入的语句
-  // $res = mysqli_query($link, 'INSERT INTO `users` VALUES(null, "郭翔2", 20, "男", "1906")');
 
-  //   执行第二种插入的 sql 语句
+  //   执行插入的 sql 语句
   $res = mysqli_query($link, "INSERT INTO `login` (`username`, `password`) VALUES('$username', '$password')");
 
   // 输出结果看一下
@@ -23,9 +21,9 @@
 //   print_r($res);
 
   if ($res) {
-    $arr = array("message" => "登录成功", "code" => 1,"username" => "$username");
+    $arr = array("message" => "注册成功", "code" => 1,"username" => "$username");
   } else {
-    $arr = array("message" => "登录失败", "code" => 0);
+    $arr = array("message" => "注册失败", "code" => 0);
   }
 
 //   // 把这关联型数组返回
