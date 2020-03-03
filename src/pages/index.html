@@ -6,30 +6,278 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.min.css">
   <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../lib/bootstrap/fonts/glyphicons-halflings-regular.svg">
+  <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui.min.css">
+  <link rel="stylesheet" href="../lib/swiper/css/swiper.min.css">
 </head>
 <body>
 
   <h1>TP-Link首页</h1>
 
+  <div class="layout-header-nav">
+      <div class="container"> 
+          <p class="header-benefit">
+              商城优惠大酬宾，全场满59元包邮
+          </p>
+          <div class="header-cart">
+              <a href="./cart.html" class="header-cart-link">
+                  <div class="header-cart-button">
+                      <div class="header-cart-button-img"></div>
+                      <span class="header-cart-button-word">
+                        购物车
+                      </span>
+                  </div>
+              </a>
+          </div>
+          <div class="header-nav">
+              <a href="./login.html" class="header-nav-item login">登录</a>
+              <span class="header-nav-item">|</span>
+              <a href="./register.html" class="header-nav-item">注册</a>
+              <span class="header-nav-item">|</span>
+              <a href="./cart.html" class="header-nav-item">我的订单</a>
+              <span class="header-nav-item">|</span>
+              <a href="#" class="header-nav-item">帮助中心</a>
+              <span class="header-nav-item">|</span>
+              <a href="#" class="header-nav-item">TP-LINK官网</a>
+          </div>> 
+      </div>
+  </div>
+  
+  <div class="layout-header-search">
+    <div class="container">
+        <a href="#">
+          <img src="" alt="" class="header-logo">
+        </a>
+        
+          <div class="layout-banner-nav">
+            <div class="banner-nav-list">
+                <div class="container2">
+                    <!-- <a href="#" class="banner-nav-list-item">家用产品</a>
+                    <a href="#" class="banner-nav-list-item">商用产品</a>
+                    <a href="#" class="banner-nav-list-item">阵列天线路由器</a>
+                    <a href="#" class="banner-nav-list-item">WVR/WAR系列</a>
+                    <a href="#" class="banner-nav-list-item">无线网络摄像机</a> -->
+                </div>
+            </div>
+          </div>
+        <form action="" class="header-search">
+              <input type="text" class="header-search-input" autocomplete="off">
+              <input type="submit" class="header-search-submit" value="">
+              <!-- <div class="header-search-keywords-item">
 
-  <a href="login.html"><p class="test">登录</p></a>
+              </div> -->
+        </form>
+    </div>
+
+  </div>
+
+  <div class="nav_box"> 
+      <ul class="container">
+
+      </ul>
+  </div>
+
+  <div class="banner container">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="http://www.tp-linkshop.com.cn/Content/themes/base/images/TL-XDR3020.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="http://www.tp-linkshop.com.cn/Content/themes/base/images/TL-WDR7650kyizhan.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="http://www.tp-linkshop.com.cn/Content/themes/base/images/IPC43AN2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="http://www.tp-linkshop.com.cn/Content/themes/base/images/TL-WDR7660k2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="http://www.tp-linkshop.com.cn/Content/themes/base/images/AP.jpg" style="height: 500px;" alt="">
+        </div>
+      </div>
+      <!-- 如果需要分页器, 下面的小圆点 -->
+      <div class="swiper-pagination"></div>
+
+      <!-- 如果需要导航按钮, 所有切换 -->
+      <div class="swiper-button-prev prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- 如果需要滚动条 -->
+      <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+    <div class="nav_list">
+      <ul>
+        <li>无线路由器 <p>></p></li>
+        <li>企业路由器 <p>></p></li>
+        <li>交换机 <p>></p></li>
+        <li>路由器 <p>></p></li>
+        <li>安防监控 <p>></p></li>
+        <li>电力线产品 <p>></p></li>
+        <li>无线扩展器 <p>></p></li>
+        <li>网卡 <p>></p></li>
+        <li>综合布线 <p>></p></li>
+        <li>其他产品 <p>></p></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hot-products">
+      <div class="container">
+          <ul class="hot-products-list">
+            <li class="hot-products-list-item"><a href="">
+              <div class="hot-products-list-item-inner" style="background: url('http://www.tp-linkshop.com.cn/Content/themes/base/images/Home/hpTL-WDR7650kyizhan.jpg') center center no-repeat;">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+              </div>
+            </a></li>
+            <li class="hot-products-list-item"><a href="">
+              <div class="hot-products-list-item-inner" style="background: url('http://www.tp-linkshop.com.cn//Content/themes/base/images/Home/hpTL-WDR7661k.jpg') center center no-repeat;">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+              </div>
+            </a></li>
+            <li class="hot-products-list-item"><a href="">
+              <div class="hot-products-list-item-inner" style="background: url('http://www.tp-linkshop.com.cn/Content/themes/base/images/Home/hpTL-WDR8690.jpg') center center no-repeat;">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+              </div>
+            </a></li>
+            <li class="hot-products-list-item"><a href="">
+              <div class="hot-products-list-item-inner" style="background: url('http://www.tp-linkshop.com.cn/Content/themes/base/images/Home/hpTL-IPC43AN.jpg') center center no-repeat;">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+              </div>
+            </a></li>
+          </ul>
+      </div>
+  </div>
+
+
   <script src="../lib/jquery/dist/jquery.min.js"></script>
   <script src="../lib/jquery-cookie/jquery.cookie.js"></script>
+  <script src="../lib/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../lib/swiper/js/swiper.min.js"></script>
   <script src="../js/index.js"></script>
 
   <script>
     console.log($.cookie('name'));
 
-    console.log($('.test'));
+    console.log($('.login'));
     $(function() {
         if ($.cookie('name')) {
           console.log('用户登录')
-            $('.test').text($.cookie('name'));
+            $('.login').text($.cookie('name'));
         }else{
           console.log('用户未登录')
         }
     })
+
+    $('.header-cart').hover(function(){
+        $('.header-cart').addClass("active")
+    },function (){
+        $('.header-cart').removeClass("active")
+    }
+    )
+
+    var mySwiper = new Swiper ('.swiper-container', {
+        // direction: 'vertical', // 垂直切换选项
+        loop: true, // 循环模式选项
+        autoplay: {
+          delay: 1000
+        },
+        effect: 'fade',
+
+        // 如果需要分页器
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        // 如果需要滚动条
+        // scrollbar: {
+        //   el: '.swiper-scrollbar',
+        // },
+      })
+
+
+    getList()
+
+    function getList() {
+      $.ajax({
+        url: '../lib/nav_top.json',
+        dataType: 'json',
+        success: function (res) {
+          console.log(res)
+
+          // 4-1. 准备一个空字符串
+          let str = ''
+
+          // 4-2. 渲染一级的 a
+          res.forEach(item => {
+            str += `<a class="banner-nav-list-item">${ item.name }</a>`
+          })
+
+          // 4-3. 填充到 nav_top 里面的 ul 里面
+          $('.container2 ')
+            .html(str)
+            .on({
+              mouseenter: () => $('.nav_box').stop().slideDown(),
+              mouseleave: () => $('.nav_box').stop().slideUp()
+            })
+            .children('a') // 找到所有的一级菜单下的 li
+            .on('mouseover', function () {
+              // 5-1. 知道自己移入的时哪一个 li
+              const index = $(this).index()
+              // 5-2. 找到要渲染的数组
+              const list = res[index].list
+              // 5-3. 用我们找到的数组把 nav_box 位置渲染了就可以了
+              let str = ''
+
+              // 5-4. 进行组装
+              list.forEach(item => {
+                str += `
+                  <li>
+                    <div>
+                      <img src="${ item.list_url }" alt="">
+                    </div>
+                    <p class="title">${ item.list_name }</p>
+                    <p class="model">${item.list_model}</p>
+                    <span class="price">￥${ item.list_price }</span>
+                  </li>
+                `
+              })
+
+              // 5-5. 填充到页面里面
+              $('.nav_box > ul').html(str)
+            })
+
+          // 4-4. 给 nav_box 添加一个移入移出事件
+          $('.nav_box')
+            .on({
+              mouseover: function () { $(this).finish().show() },
+              mouseout: function () { $(this).finish().slideUp() }
+            })
+        }
+      })
+    }
   </script>
 </body>
 </html>
