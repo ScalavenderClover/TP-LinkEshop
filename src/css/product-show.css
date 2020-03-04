@@ -1,0 +1,44 @@
+.product-show-list-item-presentation-each:hover,.product-show-list-item-presentation-last-advertise:hover,.product-show-list-item-presentation-last-more:hover{box-shadow:0 4px 16px 0 rgba(0,0,0,.15)}
+.product-show{width:100%;min-width:1200px}
+.product-show-list{width:100%}
+.product-show-list-item{width:100%;margin:40px 0 0}
+.product-show-list-item-header{width:100%;height:48px}
+.product-show-list-item-header-title{font-size:24px;line-height:24px;color:#333;float:left;font-weight:400}
+.product-show-list-item-header-nav{float:right;margin:10px 0 0}
+.product-show-list-item-header-nav-item{font-size:14px;line-height:24px;color:#666;padding:0 8px}
+.product-show-list-item-header-nav-item:nth-child(odd):hover{color:#0096FF}
+.product-show-list-item-header-nav-item:first-child{padding:0 8px 0 0}
+.product-show-list-item-header-nav-item:last-child{padding:0 0 0 8px}
+.product-show-list-item-imglink{display:block}
+.product-show-list-item-banner{display:block;width:1200px;height:120px}
+.product-show-list-item-presentation{width:100%;margin:16px 0 0;overflow:visible;height:624px}
+.product-show-list-item-presentation-left{width:230px;height:612px;float:left}
+.product-show-list-item-presentation-left-link{display:block}
+.product-show-list-item-presentation-left-img{width:230px;height:612px;display:block}
+.product-show-list-item-presentation-left1{width:230px;height:300px;float:left;margin-bottom:12px}
+.product-show-list-item-presentation-left1-link{display:block}
+.product-show-list-item-presentation-left1-img{width:230px;height:300px;display:block}
+.product-show-list-item-presentation-each{width:230px;height:300px;background-color:#FFF;float:left;position:relative;overflow:hidden;margin:0 0 12px 12px}
+.product-show-list-item-presentation-each-link{display:block;width:100%;height:100%;position:absolute;top:0;left:0}
+.product-show-list-item-presentation-each-container{width:100%;height:100%;position:absolute;top:0;left:0}
+.product-show-list-item-presentation-each-container-supper{position:absolute;top:0;right:91px;z-index:2;font-size:12px;line-height:16px;width:48px;height:20px;text-align:center;color:#FFF}
+.product-show-list-item-presentation-each-container-supper.hot{background-color:#FF3232}
+.product-show-list-item-presentation-each-container-supper.new{background-color:#0096FF}
+.product-show-list-item-presentation-each-container-img{display:block;width:136px;height:136px;margin:32px auto 20px}
+.product-show-list-item-presentation-each-container-model{font-size:14px;color:#333;text-align:center;line-height:20px}
+.product-show-list-item-presentation-each-container-description{font-size:12px;color:#666;text-align:center;line-height:16px;margin:4px 0 8px}
+.product-show-list-item-presentation-each-container-name{font-size:12px;color:#666;text-align:center;line-height:16px}
+.product-show-list-item-presentation-each-container-price{font-size:14px;color:#FF3232;text-align:center;line-height:20px;position:relative;margin-top:4px}
+.product-show-list-item-presentation-each-container-price s{position:absolute;top:0;right:50px;font-size:14px;color:#797979;text-align:center;line-height:20px}
+.product-show-list-item-presentation-last{width:230px;height:300px;float:left;margin:0 0 12px 12px}
+.product-show-list-item-presentation-last-link{display:block}
+.product-show-list-item-presentation-last-advertise{width:230px;height:164px;background-color:#FFF;margin:0 0 8px}
+.product-show-list-item-presentation-last-advertise-img{display:block;width:60px;height:60px;float:left;margin:52px 24px 52px 16px}
+.product-show-list-item-presentation-last-advertise-box{margin:20px 0 0;float:left;width:106px}
+.product-show-list-item-presentation-last-advertise-box-model{font-size:14px;color:#333;line-height:20px}
+.product-show-list-item-presentation-last-advertise-box-description{font-size:12px;color:#666;line-height:16px;margin:4px 0 8px}
+.product-show-list-item-presentation-last-advertise-box-name{font-size:12px;color:#666;line-height:16px}
+.product-show-list-item-presentation-last-advertise-box-price{font-size:14px;color:#FF3232;line-height:20px;margin-top:4px}
+.product-show-list-item-presentation-last-more{width:230px;height:124px;background-color:#FFF}
+.product-show-list-item-presentation-last-more-word{font-size:14px;color:#666;line-height:20px;margin:52px 70px 0 40px;float:left;font-weight:700}
+.product-show-list-item-presentation-last-more-img{display:block;width:24px;height:24px;margin:52px 0 0;float:left}

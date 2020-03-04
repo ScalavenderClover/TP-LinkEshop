@@ -1,0 +1,47 @@
+.pagi{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    width: 1200px;
+    margin: 20px auto;
+}
+.box >ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box >ul >li{
+    width: 22%;
+    margin: 0 0 20px 20px;
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    flex-direction: column;
+}
+
+.box >ul>li >img{
+    width: 153px;
+    height: 206px;
+    display: block;
+}
+
+.box >ul>li >p{
+    font-size: 30px;
+}
+
+.sort{
+    width: 100px;
+    height: 40px;
+    font-size: 30px;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+}

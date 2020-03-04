@@ -5,6 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    .list-show{
+      width: 642px;
+      height: 500px;
+      background-color: white;
+      position: absolute;
+      left: 215px;
+      top: 0px;
+      z-index: 999;
+      display: none;
+      /* display: flex; */
+    }
+    .list-show-inner{
+      width: 642px;
+      display: flex;
+      flex-wrap: wrap;
+      
+
+    }
+    .list-show-inner >ul{
+      padding-left:20px ;
+      padding-top: 25px;
+      text-decoration: none;
+      border-right: 1px solid #E6E6E6;
+      
+    }
+    .list-show-inner >ul >li:first-child{
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 40px;
+    }
+    .list-show-inner >ul >li{
+      width: 300px;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    .list-show-inner >ul >li >a{
+      text-decoration: none;
+      color: #666;
+      
+    }
+    .list-show-inner >ul >li >a:hover{
+      text-decoration: none;
+      color: dodgerblue;
+    }
+    .list-show-inner >ul >li >a >p{
+      float: right;
+      margin-right: 8px;
+    }
+    .container{
+      width: 1200px;
+      margin: 0 auto;
+    }
+    .container3{
+      width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-promise {
+    width: 100%;
+    height: 200px;
+    min-width: 1200px;
+    margin: 28px 0 0;
+}
+
+
+.footer-promise .footer-promise-img {
+    width: 100%;
+    height: 200px;
+    display: block;
+    background-color: #FFF;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+  </style>
   <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/common.min.css">
@@ -12,6 +87,7 @@
   <link rel="stylesheet" href="../lib/bootstrap/fonts/glyphicons-halflings-regular.svg">
   <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui.min.css">
   <link rel="stylesheet" href="../lib/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="../css/product-show.css">
 </head>
 <body>
 
@@ -55,20 +131,14 @@
           <div class="layout-banner-nav">
             <div class="banner-nav-list">
                 <div class="container2">
-                    <!-- <a href="#" class="banner-nav-list-item">家用产品</a>
-                    <a href="#" class="banner-nav-list-item">商用产品</a>
-                    <a href="#" class="banner-nav-list-item">阵列天线路由器</a>
-                    <a href="#" class="banner-nav-list-item">WVR/WAR系列</a>
-                    <a href="#" class="banner-nav-list-item">无线网络摄像机</a> -->
+                    
                 </div>
             </div>
           </div>
         <form action="" class="header-search">
               <input type="text" class="header-search-input" autocomplete="off">
-              <input type="submit" class="header-search-submit" value="">
-              <!-- <div class="header-search-keywords-item">
-
-              </div> -->
+              <input type="button" class="header-search-submit" value="">
+              
         </form>
     </div>
 
@@ -99,15 +169,14 @@
           <img src="http://www.tp-linkshop.com.cn/Content/themes/base/images/AP.jpg" style="height: 500px;" alt="">
         </div>
       </div>
-      <!-- 如果需要分页器, 下面的小圆点 -->
+      
       <div class="swiper-pagination"></div>
 
-      <!-- 如果需要导航按钮, 所有切换 -->
+    
       <div class="swiper-button-prev prev"></div>
       <div class="swiper-button-next"></div>
 
-      <!-- 如果需要滚动条 -->
-      <!-- <div class="swiper-scrollbar"></div> -->
+      
     </div>
 
     <div class="nav_list">
@@ -123,6 +192,26 @@
         <li>综合布线 <p>></p></li>
         <li>其他产品 <p>></p></li>
       </ul>
+    </div>
+
+    <div class="list-show" style="width: 642px;">
+        <div class="list-show-inner">
+            <ul >
+              <li><a href="">Wi-Fi6无线路由器 <p>></p></a></li>
+              <li><a href="">⦁ AX3000双频千兆Wi-Fi6无线路由器 </a></li>
+            </ul>
+            <ul >
+              <li><a href="">Wi-Fi6无线路由器 <p>></p></a></li>
+              <li><a href="">⦁ AX3000双频千兆Wi-Fi6无线路由器 </a></li>
+            </ul>
+        </div>
+        <!-- <div class="list-show-inner">
+          <ul >
+            <li><a href="">Wi-Fi6无线路由器 <p>></p></a></li>
+            <li><a href="">⦁ AX3000双频千兆Wi-Fi6无线路由器 </a></li>
+          </ul>
+      </div> -->
+        
     </div>
   </div>
 
@@ -165,6 +254,152 @@
       </div>
   </div>
 
+  <div class="product-show"> 
+      <div class="container3">
+          <ul class="product-show-list">
+              <li class="product-show-list-item">
+                  <div class="product-show-list-item-header">
+                      <h3 class="product-show-list-item-header-title">家用产品</h3>
+                      <div class="product-show-list-item-header-nav"> 
+                          <a href="" class="product-show-list-item-header-nav-item">路由器</a>
+                          <span class="product-show-list-item-header-nav-item">|</span>
+                          <a href="" class="product-show-list-item-header-nav-item">小居室</a>
+                          <span class="product-show-list-item-header-nav-item">|</span>
+                          <a href="" class="product-show-list-item-header-nav-item">迷你路由器</a>
+                      </div>
+                  </div>
+                  <a href="" class="product-show-list-item-img">
+                      <img src="http://www.tp-linkshop.com.cn/Content/themes/base/images/Home/soho_banner.jpg" alt="" class="product-show-list-item-banner" style="width: 1200px;">
+                  </a>
+
+                  <ul class="product-show-list-item-presentation">
+                      <li class="product-show-list-item-presentation-left">
+                          <a href="" class="product-show-list-item-presentation-left">
+                            <img class="product-show-list-item-presentation-left-img" src="http://www.tp-linkshop.com.cn/Content/themes/base/images/Home/soho_left.jpg" alt="">
+                          </a>
+                      </li>
+                      <li class="product-show-list-item-presentation-each">
+                        <a href="" class="product-show-list-item-presentation-each-link">
+                          <div class="product-show-list-item-presentation-each-container">
+                            <p class="product-show-list-item-presentation-each-container-supper hot">热卖</p>
+                            <img class="product-show-list-item-presentation-each-container-img" src="http://www.tp-linkshop.com.cn/ProductImg200/1124.png" alt="">
+                            <p class="product-show-list-item-presentation-each-container-model">1900M易展Mesh分布式路由</p>
+                            <p class="product-show-list-item-presentation-each-container-description">易展路由，覆盖更全面，扩展更方便</p>
+                            <p class="product-show-list-item-presentation-each-container-name">TL-WDR7650千兆易展版套装</p>
+                            <p class="product-show-list-item-presentation-each-container-price">¥349</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="product-show-list-item-presentation-each">
+                        <a href="" class="product-show-list-item-presentation-each-link">
+                          <div class="product-show-list-item-presentation-each-container">
+                            <p class="product-show-list-item-presentation-each-container-supper new">新品</p>
+                            <img class="product-show-list-item-presentation-each-container-img" src="http://www.tp-linkshop.com.cn/ProductImg200/1124.png" alt="">
+                            <p class="product-show-list-item-presentation-each-container-model">1900M易展Mesh分布式路由</p>
+                            <p class="product-show-list-item-presentation-each-container-description">易展路由，覆盖更全面，扩展更方便</p>
+                            <p class="product-show-list-item-presentation-each-container-name">TL-WDR7650千兆易展版套装</p>
+                            <p class="product-show-list-item-presentation-each-container-price">¥349</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="product-show-list-item-presentation-each">
+                        <a href="" class="product-show-list-item-presentation-each-link">
+                          <div class="product-show-list-item-presentation-each-container">
+                            <p class="product-show-list-item-presentation-each-container-supper hot">热卖</p>
+                            <img class="product-show-list-item-presentation-each-container-img" src="http://www.tp-linkshop.com.cn/ProductImg200/1124.png" alt="">
+                            <p class="product-show-list-item-presentation-each-container-model">1900M易展Mesh分布式路由</p>
+                            <p class="product-show-list-item-presentation-each-container-description">易展路由，覆盖更全面，扩展更方便</p>
+                            <p class="product-show-list-item-presentation-each-container-name">TL-WDR7650千兆易展版套装</p>
+                            <p class="product-show-list-item-presentation-each-container-price">¥349</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="product-show-list-item-presentation-each">
+                        <a href="" class="product-show-list-item-presentation-each-link">
+                          <div class="product-show-list-item-presentation-each-container">
+                            <p class="product-show-list-item-presentation-each-container-supper new">新品</p>
+                            <img class="product-show-list-item-presentation-each-container-img" src="http://www.tp-linkshop.com.cn/ProductImg200/1124.png" alt="">
+                            <p class="product-show-list-item-presentation-each-container-model">1900M易展Mesh分布式路由</p>
+                            <p class="product-show-list-item-presentation-each-container-description">易展路由，覆盖更全面，扩展更方便</p>
+                            <p class="product-show-list-item-presentation-each-container-name">TL-WDR7650千兆易展版套装</p>
+                            <p class="product-show-list-item-presentation-each-container-price">¥349</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="product-show-list-item-presentation-each">
+                        <a href="" class="product-show-list-item-presentation-each-link">
+                          <div class="product-show-list-item-presentation-each-container">
+                            <p class="product-show-list-item-presentation-each-container-supper hot">热卖</p>
+                            <img class="product-show-list-item-presentation-each-container-img" src="http://www.tp-linkshop.com.cn/ProductImg200/1124.png" alt="">
+                            <p class="product-show-list-item-presentation-each-container-model">1900M易展Mesh分布式路由</p>
+                            <p class="product-show-list-item-presentation-each-container-description">易展路由，覆盖更全面，扩展更方便</p>
+                            <p class="product-show-list-item-presentation-each-container-name">TL-WDR7650千兆易展版套装</p>
+                            <p class="product-show-list-item-presentation-each-container-price">¥349</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="product-show-list-item-presentation-each">
+                        <a href="" class="product-show-list-item-presentation-each-link">
+                          <div class="product-show-list-item-presentation-each-container">
+                            <p class="product-show-list-item-presentation-each-container-supper new">新品</p>
+                            <img class="product-show-list-item-presentation-each-container-img" src="http://www.tp-linkshop.com.cn/ProductImg200/1124.png" alt="">
+                            <p class="product-show-list-item-presentation-each-container-model">1900M易展Mesh分布式路由</p>
+                            <p class="product-show-list-item-presentation-each-container-description">易展路由，覆盖更全面，扩展更方便</p>
+                            <p class="product-show-list-item-presentation-each-container-name">TL-WDR7650千兆易展版套装</p>
+                            <p class="product-show-list-item-presentation-each-container-price">¥349</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="product-show-list-item-presentation-each">
+                        <a href="" class="product-show-list-item-presentation-each-link">
+                          <div class="product-show-list-item-presentation-each-container">
+                            <p class="product-show-list-item-presentation-each-container-supper new">新品</p>
+                            <img class="product-show-list-item-presentation-each-container-img" src="http://www.tp-linkshop.com.cn/ProductImg200/1124.png" alt="">
+                            <p class="product-show-list-item-presentation-each-container-model">1900M易展Mesh分布式路由</p>
+                            <p class="product-show-list-item-presentation-each-container-description">易展路由，覆盖更全面，扩展更方便</p>
+                            <p class="product-show-list-item-presentation-each-container-name">TL-WDR7650千兆易展版套装</p>
+                            <p class="product-show-list-item-presentation-each-container-price">¥349</p>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="product-show-list-item-presentation-last">
+                        <a href="" class="product-show-list-item-presentation-last-link">
+                          <div class="product-show-list-item-presentation-last-advertise">
+                            <img class="product-show-list-item-presentation-last-advertise-img" src="http://www.tp-linkshop.com.cn/ProductImg200/527.png" alt="">
+                            <div class="product-show-list-item-presentation-last-advertise-box">
+                              <p class="product-show-list-item-presentation-last-advertise-box-model">AC1200双频无线路由器</p>
+                              <p class="product-show-list-item-presentation-last-advertise-box-description">信号稳定，百万用户经典之路</p>
+                              <p class="product-show-list-item-presentation-last-advertise-box-name">TL-WDR5620</p>
+                              <p class="product-show-list-item-presentation-last-advertise-box-price">￥109.9</p>
+                            </div>
+                          </div>
+                        </a>
+
+                        <a href="" class="product-show-list-item-presentation-last-link">
+                          <div class="product-show-list-item-presentation-last-more">
+                            <p class="product-show-list-item-presentation-last-more-word">浏览更多</p>
+                            <img class="product-show-list-item-presentation-last-more-img" src="http://www.tp-linkshop.com.cn/Content/themes/base/images/Home/go_gray.png" alt="">
+                          </div>
+                        </a>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+
+  <div class="footer-promise">
+      <div class="container">
+          <img src="http://www.tp-linkshop.com.cn/Content/themes/base/images/Shared/promise.jpg" alt="" class="footer-promise-img">
+      </div>
+  </div>
+
 
   <script src="../lib/jquery/dist/jquery.min.js"></script>
   <script src="../lib/jquery-cookie/jquery.cookie.js"></script>
@@ -173,6 +408,9 @@
   <script src="../js/index.js"></script>
 
   <script>
+    $('.header-search-submit').click(function(){
+      window.location.href = './list.html'
+    })
     console.log($.cookie('name'));
 
     console.log($('.login'));
@@ -242,9 +480,9 @@
               mouseenter: () => $('.nav_box').stop().slideDown(),
               mouseleave: () => $('.nav_box').stop().slideUp()
             })
-            .children('a') // 找到所有的一级菜单下的 li
+            .children('a') // 找到所有的一级菜单下的 a
             .on('mouseover', function () {
-              // 5-1. 知道自己移入的时哪一个 li
+              // 5-1. 知道自己移入的时哪一个 a
               const index = $(this).index()
               // 5-2. 找到要渲染的数组
               const list = res[index].list
@@ -275,6 +513,65 @@
               mouseover: function () { $(this).finish().show() },
               mouseout: function () { $(this).finish().slideUp() }
             })
+        }
+      })
+    }
+    //侧边导航栏渲染
+    getaside();
+    function getaside(){
+      $.ajax({
+        url:'../lib/nav.json',
+        dataType:'json',
+        success:function (res) {
+          
+
+          $('.nav_list > ul')
+              .on({
+                mouseenter: () => $('.list-show').stop().show(),
+                mouseleave: () => $('.list-show').stop().hide()
+              })
+              .children('li') // 找到所有的一级菜单下的 li
+              .on('mouseover', function () {
+                // 知道自己移入的时哪一个 li
+                const index = $(this).index()
+                //  找到要渲染的数组
+                const list = res[index].list
+          
+            let str=''
+            list.forEach(item => {
+              str += `
+                    <ul>
+                        <li>
+                        <a>${item.name}
+                        <p>></p>
+                        </a>
+                        </li>
+                  `
+              //二级标题
+           
+        
+            item.list2.forEach(item2 => {
+              
+              
+                str +=`
+                  <li><a>${item2.goods}</a></li>
+                
+                `
+              })
+              str +=`
+              </ul>
+              `
+            })
+
+            // 3. 渲染到页面上
+             $('.list-show-inner').html(str)
+          })
+          $('.list-show')
+            .on({
+              mouseover: function () { $(this).finish().show() },
+              mouseout: function () { $(this).finish().hide() }
+            })
+         
         }
       })
     }
