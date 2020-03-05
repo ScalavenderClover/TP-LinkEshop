@@ -4,65 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .pagi{
-    width: 1200px;
-    height: 100px;
-    margin: 0 auto;
-    border: 1px solid #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.box {
-    width: 1200px;
-    margin: 20px auto;
-}
-.box >ul{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-.box >ul >li{
-    width: 22%;
-    margin: 0 0 20px 20px;
-    border: 1px solid #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    flex-direction: column;
-}
-
-.box >ul>li >img{
-    width: 153px;
-    height: 206px;
-    display: block;
-}
-
-.box >ul>li >p{
-    font-size: 30px;
-}
-
-.sort{
-    width: 100px;
-    height: 40px;
-    font-size: 30px;
-    position: fixed;
-    top: 30px;
-    left: 30px;
-}
-    </style>
     <link rel="stylesheet" href="../lib/pagination/pagination.css">
-    
     <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.min.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../lib/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="../css/list.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
-<body>
+<body style="background-color: #FFF;">
     <div class="layout-header-nav">
         <div class="container"> 
             <p class="header-benefit">
@@ -121,16 +72,36 @@
     </div>
 
 
-    
- <button class="sort">排序</button>
+  <div class="product-search">
+    <div class="container">
+      <div class="product-search-sort">
+        <div class="product-search-sort-item">
+           <a class="sort">排序</a>
+        </div>
+       
+      </div> 
+        <div class="box" >
+          <ul class="product-search-presentation">
+            
+          </ul>
+        </div>
+        <div class="pagi m-style"></div>
+    </div>
+ </div>
 
-  <div class="box" style="display: flex;flex-wrap: wrap;">
-    <ul>
-      
-    </ul>
+ <div class="footer-promise">
+  <div class="container">
+      <img src="http://www.tp-linkshop.com.cn/Content/themes/base/images/Shared/promise.jpg" alt="" class="footer-promise-img">
   </div>
-<div class="pagi m-style"></div>
- 
+</div>
+
+<div class="layout-footer-service">
+<div class="container">
+<ul class="footer-service">
+  
+</ul>
+</div>
+</div>
 
 
 
@@ -139,6 +110,7 @@
     <script src="../lib/swiper/js/swiper.min.js"></script>
     <script src="../js/list.js"></script>
     <script src="../lib/pagination/pagination.js"></script>
+    <script src="../js/footer.js"></script>
     <script>
         // 2-1. 准备一个变量
         var flag = true
@@ -202,9 +174,16 @@
           list.forEach(item => {
             str += `
               <li data-id="${ item.list_id }">
-                <img src="${item.list_url}">
-                <p>${ item.list_name }</p>
-                <p>${ item.list_price }</p>
+                <div class="product-search-container-box">
+                <img src="${item.list_url}" class="product-search-container-box-img">
+                </div>
+                <h3 class="product-search-container-title ">${ item.list_name }</h3>
+                <div class="product-search-container-tag"></div>
+                <div class="product-search-container">
+                <p class="product-search-container-price">￥${ item.list_price }</p>
+                
+                </div>
+                
               </li>
             `
           })
@@ -262,7 +241,7 @@
           let data = {}
     
           for (let i = 0; i < list2.length; i++) {
-            if (list2[i].id === id) {
+            if (list2[i].list_id === id) {
               data = list2[i]
               break
             }
@@ -275,7 +254,7 @@
           //    localStorage -> 存储起来的数据不会自动携带
           // 就把我找到的这个数据存储在 localStorage 里面
           //   当你到达 detail 页面的时候, 在拿出来就可以了
-          localStorage.setItem('goods_info', JSON.stringify(data))
+          localStorage.setItem('goodsInfo', JSON.stringify(data))
     
           // 存储好了以后就跳转页面
           window.location.href = './detail.html'
