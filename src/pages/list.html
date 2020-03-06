@@ -112,14 +112,14 @@
     <script src="../lib/pagination/pagination.js"></script>
     <script src="../js/footer.js"></script>
     <script>
-        // 2-1. 准备一个变量
+        // 准备一个变量
         var flag = true
     
-        // 2-2. 准备一个变量接收数组
+        //准备一个变量接收数组
         var list2 = []
     
     
-        // 1. 请求数据
+        //请求数据
         getList2()
         function getList2() {
           $.ajax({
@@ -128,7 +128,7 @@
             success: function (res) {
              
     
-              // 2. 渲染分页器
+              //渲染分页器
               $('.pagi').pagination({
                 pageCount: Math.ceil(res.length / 12), // 总页数
                 current: 1, // 当前页
@@ -138,35 +138,29 @@
                 endPage: '末页', // 末页按钮的文本
                 prevContent: '上页',
                 nextContent: '下页',
-                callback: function (api) { // 当你切换页面的时候会触发
-                  // api.getCurrent() 获取当前是第几页
-                  // console.log(api.getCurrent())
+                callback: function (api) { //切换页面的时候会触发
                   let curr = api.getCurrent()
-    
-                  // console.log(curr)
                   // 根据是第几页, 从我的总数组里面筛选出一部分数据
                   //   slice 方法包前不包后
                   var list = res.slice((curr - 1) * 12, curr * 12)
-                  // console.log(list)
                   // slice 不改变原始数组, 只是从数组里面拿到一些内容
                   // splice 方法才是改变原始数组, 从原始数组里面删除
     
-                  // 3-2. 每次使用分页器切换的时候渲染一次
+                  //每次使用分页器切换的时候渲染一次
                   bindHtml(list)
                 }
               })
     
-              // 3. 先把第一页的数据渲染一次
+              //先把第一页的数据渲染一次
               bindHtml(res.slice(0, 12))
     
-              // 2-2. 给全局变量赋值
+              // 给全局变量赋值
               list2 = res
             }
           })
         }
     
         function bindHtml(list) {
-          // console.log(list)
           // 根据 list 数组渲染页面就可以了
     
           let str = ''
@@ -192,7 +186,7 @@
         }
     
     
-        // 2. 排序
+        //  排序
         var btn = document.querySelector('.sort')
         btn.onclick = function () {
           // 让准备好的变量改变
@@ -206,8 +200,7 @@
               return b.list_id - a.list_id
             }
           })
-    
-          // console.log(list)
+
     
           $('.pagi').pagination({
             pageCount: Math.ceil(list2.length / 12), // 总页数
@@ -218,21 +211,19 @@
             endPage: '末页', // 末页按钮的文本
             prevContent: '上页',
             nextContent: '下页',
-            callback: function (api) { // 当你切换页面的时候会触发
+            callback: function (api) { // 切换页面的时候会触发
               let curr = api.getCurrent()
-              // console.log(curr)
               var list = list2.slice((curr - 1) * 12, curr * 12)
-              // 3-2. 每次使用分页器切换的时候渲染一次
               bindHtml(list)
             }
           })
     
-          // 3. 先把第一页的数据渲染一次
+          //  先把第一页的数据渲染一次
           bindHtml(list2.slice(0, 12))
         }
     
     
-        // 3. 事件委托绑定一个事件
+        //事件委托绑定一个事件
         $('.box > ul').on('click', 'li', function () {
           const id = $(this).data('id')
           // console.log('我应该找到 list2 这个数组中 id 为 ' + id + ' 的那一条数据')

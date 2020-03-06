@@ -91,7 +91,7 @@
     }
 
     function bindEvent() {
-      // 4-1. 全选按钮的事件
+      //  全选按钮的事件
       $('.cart').on('change', '.selectAll', function () {
         // 让数组里面的每一个数据的 isSelect 都变成 自己的状态
         cartList.forEach(item => {
@@ -105,7 +105,7 @@
         localStorage.setItem('cartList', JSON.stringify(cartList))
       })
 
-      // 4-2. 单选按钮的事件
+      // 单选按钮的事件
       $('.cart').on('change', '.selectOne', function () {
         // console.log($(this).data('id'))
         // 你要知道你点击的是哪一个数据的单选按钮
@@ -125,7 +125,7 @@
         localStorage.setItem('cartList', JSON.stringify(cartList))
       })
 
-      // 4-3. 减少商品数量的事件
+      //  减少商品数量的事件
       $('.cart').on('click', '.sub', function () {
         const id = $(this).data('id')
 
@@ -145,7 +145,7 @@
         localStorage.setItem('cartList', JSON.stringify(cartList))
       })
 
-      // 4-4. 添加商品数量按钮的事件
+      //添加商品数量按钮的事件
       $('.cart').on('click', '.add', function () {
         // 拿到自己身上存储的 id
         const id = $(this).data('id')

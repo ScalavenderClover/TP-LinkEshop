@@ -21,25 +21,24 @@
     )
 
     var mySwiper = new Swiper ('.swiper-container', {
-        // direction: 'vertical', // 垂直切换选项
         loop: true, // 循环模式选项
         autoplay: {
           delay: 1000
         },
         effect: 'fade',
 
-        // 如果需要分页器
+        //分页器
         pagination: {
           el: '.swiper-pagination',
         },
 
-        // 如果需要前进后退按钮
+        //前进后退按钮
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
 
-        // 如果需要滚动条
+        // 滚动条
         // scrollbar: {
         //   el: '.swiper-scrollbar',
         // },
@@ -55,15 +54,15 @@
         success: function (res) {
           console.log(res)
 
-          // 4-1. 准备一个空字符串
+          // 准备一个空字符串
           let str = ''
 
-          // 4-2. 渲染一级的 a
+          //渲染一级的 a
           res.forEach(item => {
             str += `<a class="banner-nav-list-item">${ item.name }</a>`
           })
 
-          // 4-3. 填充到 nav_top 里面的 ul 里面
+          //填充到 container2 里面
           $('.container2 ')
             .html(str)
             .on({
@@ -153,7 +152,7 @@
               `
             })
 
-            // 3. 渲染到页面上
+            //  渲染到页面上
              $('.list-show-inner').html(str)
           })
           $('.list-show')

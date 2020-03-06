@@ -1,11 +1,11 @@
-<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Document</title><link rel=stylesheet href=../lib/pagination/pagination.css><link rel=stylesheet href=../lib/bootstrap/dist/css/bootstrap.css><link rel=stylesheet href=../css/reset.css><link rel=stylesheet href=../css/common.min.css><link rel=stylesheet href=../css/index.css><link rel=stylesheet href=../lib/swiper/css/swiper.min.css><link rel=stylesheet href=../css/list.css><link rel=stylesheet href=../css/footer.css></head><body style=background-color:#fff><div class=layout-header-nav><div class=container><p class=header-benefit>商城优惠大酬宾，全场满59元包邮</p><div class=header-cart><a href=./cart.html class=header-cart-link><div class=header-cart-button><div class=header-cart-button-img></div><span class=header-cart-button-word>购物车</span></div></a></div><div class=header-nav><a href=./login.html class="header-nav-item login">登录</a> <span class=header-nav-item>|</span> <a href=./register.html class=header-nav-item>注册</a> <span class=header-nav-item>|</span> <a href=./cart.html class=header-nav-item>我的订单</a> <span class=header-nav-item>|</span> <a href=# class=header-nav-item>帮助中心</a> <span class=header-nav-item>|</span> <a href=# class=header-nav-item>TP-LINK官网</a></div>></div></div><div class=layout-header-search><div class=container><a href=./index.html><img src="" alt="" class=header-logo></a><div class=layout-banner-nav><div class=banner-nav-list><div class=container2></div></div></div><form action="" class=header-search><input type=text class=header-search-input autocomplete=off> <input type=button class=header-search-submit value=""></form></div></div><div class=nav_box><ul class=container></ul></div><div class=product-search><div class=container><div class=product-search-sort><div class=product-search-sort-item><a class=sort>排序</a></div></div><div class=box><ul class=product-search-presentation></ul></div><div class="pagi m-style"></div></div></div><div class=footer-promise><div class=container><img src=http://www.tp-linkshop.com.cn/Content/themes/base/images/Shared/promise.jpg alt="" class=footer-promise-img></div></div><div class=layout-footer-service><div class=container><ul class=footer-service></ul></div></div><script src=../lib/jquery/dist/jquery.min.js></script><script src=../lib/jquery-cookie/jquery.cookie.js></script><script src=../lib/swiper/js/swiper.min.js></script><script src=../js/list.js></script><script src=../lib/pagination/pagination.js></script><script src=../js/footer.js></script><script>// 2-1. 准备一个变量
+<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Document</title><link rel=stylesheet href=../lib/pagination/pagination.css><link rel=stylesheet href=../lib/bootstrap/dist/css/bootstrap.css><link rel=stylesheet href=../css/reset.css><link rel=stylesheet href=../css/common.min.css><link rel=stylesheet href=../css/index.css><link rel=stylesheet href=../lib/swiper/css/swiper.min.css><link rel=stylesheet href=../css/list.css><link rel=stylesheet href=../css/footer.css></head><body style=background-color:#fff><div class=layout-header-nav><div class=container><p class=header-benefit>商城优惠大酬宾，全场满59元包邮</p><div class=header-cart><a href=./cart.html class=header-cart-link><div class=header-cart-button><div class=header-cart-button-img></div><span class=header-cart-button-word>购物车</span></div></a></div><div class=header-nav><a href=./login.html class="header-nav-item login">登录</a> <span class=header-nav-item>|</span> <a href=./register.html class=header-nav-item>注册</a> <span class=header-nav-item>|</span> <a href=./cart.html class=header-nav-item>我的订单</a> <span class=header-nav-item>|</span> <a href=# class=header-nav-item>帮助中心</a> <span class=header-nav-item>|</span> <a href=# class=header-nav-item>TP-LINK官网</a></div>></div></div><div class=layout-header-search><div class=container><a href=./index.html><img src="" alt="" class=header-logo></a><div class=layout-banner-nav><div class=banner-nav-list><div class=container2></div></div></div><form action="" class=header-search><input type=text class=header-search-input autocomplete=off> <input type=button class=header-search-submit value=""></form></div></div><div class=nav_box><ul class=container></ul></div><div class=product-search><div class=container><div class=product-search-sort><div class=product-search-sort-item><a class=sort>排序</a></div></div><div class=box><ul class=product-search-presentation></ul></div><div class="pagi m-style"></div></div></div><div class=footer-promise><div class=container><img src=http://www.tp-linkshop.com.cn/Content/themes/base/images/Shared/promise.jpg alt="" class=footer-promise-img></div></div><div class=layout-footer-service><div class=container><ul class=footer-service></ul></div></div><script src=../lib/jquery/dist/jquery.min.js></script><script src=../lib/jquery-cookie/jquery.cookie.js></script><script src=../lib/swiper/js/swiper.min.js></script><script src=../js/list.js></script><script src=../lib/pagination/pagination.js></script><script src=../js/footer.js></script><script>// 准备一个变量
         var flag = true
     
-        // 2-2. 准备一个变量接收数组
+        //准备一个变量接收数组
         var list2 = []
     
     
-        // 1. 请求数据
+        //请求数据
         getList2()
         function getList2() {
           $.ajax({
@@ -14,7 +14,7 @@
             success: function (res) {
              
     
-              // 2. 渲染分页器
+              //渲染分页器
               $('.pagi').pagination({
                 pageCount: Math.ceil(res.length / 12), // 总页数
                 current: 1, // 当前页
@@ -24,35 +24,29 @@
                 endPage: '末页', // 末页按钮的文本
                 prevContent: '上页',
                 nextContent: '下页',
-                callback: function (api) { // 当你切换页面的时候会触发
-                  // api.getCurrent() 获取当前是第几页
-                  // console.log(api.getCurrent())
+                callback: function (api) { //切换页面的时候会触发
                   let curr = api.getCurrent()
-    
-                  // console.log(curr)
                   // 根据是第几页, 从我的总数组里面筛选出一部分数据
                   //   slice 方法包前不包后
                   var list = res.slice((curr - 1) * 12, curr * 12)
-                  // console.log(list)
                   // slice 不改变原始数组, 只是从数组里面拿到一些内容
                   // splice 方法才是改变原始数组, 从原始数组里面删除
     
-                  // 3-2. 每次使用分页器切换的时候渲染一次
+                  //每次使用分页器切换的时候渲染一次
                   bindHtml(list)
                 }
               })
     
-              // 3. 先把第一页的数据渲染一次
+              //先把第一页的数据渲染一次
               bindHtml(res.slice(0, 12))
     
-              // 2-2. 给全局变量赋值
+              // 给全局变量赋值
               list2 = res
             }
           })
         }
     
         function bindHtml(list) {
-          // console.log(list)
           // 根据 list 数组渲染页面就可以了
     
           let str = ''
@@ -78,7 +72,7 @@
         }
     
     
-        // 2. 排序
+        //  排序
         var btn = document.querySelector('.sort')
         btn.onclick = function () {
           // 让准备好的变量改变
@@ -92,8 +86,7 @@
               return b.list_id - a.list_id
             }
           })
-    
-          // console.log(list)
+
     
           $('.pagi').pagination({
             pageCount: Math.ceil(list2.length / 12), // 总页数
@@ -104,21 +97,19 @@
             endPage: '末页', // 末页按钮的文本
             prevContent: '上页',
             nextContent: '下页',
-            callback: function (api) { // 当你切换页面的时候会触发
+            callback: function (api) { // 切换页面的时候会触发
               let curr = api.getCurrent()
-              // console.log(curr)
               var list = list2.slice((curr - 1) * 12, curr * 12)
-              // 3-2. 每次使用分页器切换的时候渲染一次
               bindHtml(list)
             }
           })
     
-          // 3. 先把第一页的数据渲染一次
+          //  先把第一页的数据渲染一次
           bindHtml(list2.slice(0, 12))
         }
     
     
-        // 3. 事件委托绑定一个事件
+        //事件委托绑定一个事件
         $('.box > ul').on('click', 'li', function () {
           const id = $(this).data('id')
           // console.log('我应该找到 list2 这个数组中 id 为 ' + id + ' 的那一条数据')
