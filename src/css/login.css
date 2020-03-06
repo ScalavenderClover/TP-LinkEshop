@@ -18,7 +18,7 @@
 .login{
     width: 100%;
     height: 1000px;
-    background: linear-gradient(to bottom,#66CCFF,#FFFFFF);
+    background: url(https://www.tp-linkshop.com.cn/Content/themes/base/images/Account/loginBg.png);
 }
 
 .login-container{
